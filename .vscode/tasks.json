@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Скомпилировать и запустить с chcp 1251",
+            "type": "shell",
+            "command": "chcp 1251 && gcc -mconsole \"${file}\" -o \"${fileDir}\\${fileBasenameNoExtension}.exe\" && \"${fileDir}\\${fileBasenameNoExtension}.exe\"",
+            "options": {
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": ["/c"]
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

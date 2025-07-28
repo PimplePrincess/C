@@ -1,30 +1,25 @@
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
 
-int main(void){
-    
 
-    char* word = malloc(101);
-    char* changedWord = malloc(101);
-    
+int main() {
+    int n;
 
-    printf("Please, enter text from characte. At the end press Enter.\n");
-    scanf("%100s", word);
-    printf("You entered: %s\n", word);
+    printf("Input an integer: ");
+    scanf("%d", &n);
 
-    int len = strlen(word);
-
-    for (int i = 0; i < len; i++){
-        changedWord[i] = word[len - 1- i];
+    if (n >= 0){
+        printf("Positive ");
+    } else {
+        printf ("Negative ");
     }
-    changedWord[len] = '\0'; 
-   
 
-    free(word);
-    free(changedWord);
+    if (n % 2 == 0){
+        printf("Even\n");
+    } else {
+        printf("Odd");
+    }
 
-    printf("Changed word: %s\n", changedWord);
-    
     return 0;
 }
